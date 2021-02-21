@@ -1,0 +1,56 @@
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+  input, textarea {
+    font-family:inherit;
+    font-size: inherit;
+  }
+
+
+.welcome{
+    text-align: center;
+    padding:2.5%;
+    margin: 2.5%;
+}
+
+.myform-control{
+
+}
+
+
+input[type=text] {
+    padding: 10px;
+    margin:10px 0; // add top and bottom margin
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    border: 2px solid #eee;
+  }
+
+.border-customized-input {
+    border: 2px solid #eee;
+ }
+
+
+input {
+    width:100%;
+}
+
+
+button {
+
+    /* remove default behavior */
+    appearance:none;
+    -webkit-appearance:none;
+  
+    /* usual styles */
+    padding:10px;
+    border:none;
+    background-color:#3F51B5;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    width:100%;
+  
+  }

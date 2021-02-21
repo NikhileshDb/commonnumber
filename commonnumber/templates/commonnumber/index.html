@@ -1,0 +1,68 @@
+{% extends "commonnumber/main.html" %}
+
+
+{% block content %}
+            <!---Date Selection Form-->
+<h2 class="welcome">Welcome To Shillong Teer Result Library</h2>
+            <div class="container">
+                <form method="GET">
+                    {% csrf_token %}
+                    <div class="row">
+                    {% for field in myFilter.form %}
+                    
+                    <div class="col">
+                        {{field}}
+                    </div>
+                    
+                    {% endfor %}
+                    </div>
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
+                </form>
+            </div>
+          
+           
+              
+            
+
+            <!----Calender UI---->
+            <script>
+                $(function() {
+                    $( "#id_date_between_0" ).datepicker();
+                });
+
+                $(function() {
+                    $( "#id_date_between_1" ).datepicker();
+                });
+            </script>
+
+
+<div class="container">
+
+                <!---Display Search Result-->
+
+                <table class="table table-hover table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">First Round</th>
+                        <th scope="col">Second Round</th>
+                        <th scope="col">Common Number</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for result in resultNum %}
+                      <tr>
+                        <th scope="row">{{result.date}}</th>
+                        <td>{{result.firstresult}}</td>
+                        <td>{{result.secondresult}}</td>
+                        <td>{{result.commonnumber}}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+
+
+            </div>
+
+ {% endblock %}
+ ewrerwerwrew
